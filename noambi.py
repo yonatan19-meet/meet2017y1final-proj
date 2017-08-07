@@ -2,6 +2,16 @@ import turtle
 SIZE_X=1000
 SIZE_Y=700
 turtle.setup(SIZE_X,SIZE_Y)
+turtle.penup()
+
+turtle.goto(-400,50)
+turtle.pendown()
+turtle.goto(340,50)
+turtle.penup()
+turtle.goto(-350,50)
+turtle.pendown()
+turtle.goto(-350,230)
+
 
 
 ethiopia = turtle.clone()
@@ -38,6 +48,6 @@ peru.stamp
 afghnistan= turtle.clone()
 afghnistan.shape("classic")
 afghnistan.penup()
-afghnistan.goto(350,50)
+afghnistan.goto(360,50)
 afghnistan.stamp
 
