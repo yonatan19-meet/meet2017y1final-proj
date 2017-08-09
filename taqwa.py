@@ -1,10 +1,10 @@
 import turtle
+girl= turtle.clone()
 turtle.register_shape('girl.gif')
 turtle.shape('girl.gif')
 
 
-
-turtle.clone()
+basket=turtle.clone()
 turtle.register_shape("basket3.gif")
 turtle.shape("basket3.gif")
 turtle.penup()
