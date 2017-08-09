@@ -9,27 +9,29 @@ def answer_A():
         turtle.clear()
         turtle.goto(0,0)
         turtle.write('You answered right')
+        
 def answer_B():
         turtle.clear()
         turtle.goto(0,0)
         turtle.write('You answered wrong')
+        
 def answer_C():
         turtle.clear()
         turtle.goto(0,0)
         turtle.write('You answered wrong')
+        
 def answer_D():
         turtle.clear()
         turtle.goto(0,0)
         turtle.write('You answered wrong')
         
-
 turtle.onkeypress(answer_A, 'a')
 turtle.onkeypress(answer_B, 'b')
 turtle.onkeypress(answer_C, 'c')
 turtle.onkeypress(answer_D, 'd')
 turtle.listen()
 def riddles():
-	if girl.gif.pos() == ethiopia:
+	if girl.pos() == ethiopia:
 		stamp.stamp()
 		turtle.penup()
 		turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7)
@@ -44,7 +46,7 @@ def riddles():
 		turtle.pendown()
 		turtle.write("b/lost tree")
 		turtle.penup()
-		turtle.goto(SIZE_X * 3 /10,SIZE_Y / 7)
+		turtle.goto(SIZE_X * 3 / 10,SIZE_Y / 7)
 		turtle.pendown()
 		turtle.write("c/apple tree")
 		turtle.penup()
@@ -52,7 +54,7 @@ def riddles():
 		turtle.pendown()
 		turtle.write("d/dead tree")
 		
-	if girl.gif.pos() == madagascar:
+	if girl.pos() == madagascar:
 		stamp.stamp()
 		turtle.penup()
 		turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7 )
@@ -67,7 +69,7 @@ def riddles():
 		turtle.pendown()
 		turtle.write("b/Breakfast")
 		turtle.penup()
-		turtle.goto(SIZE_X * 3, SIZE_Y / 7)
+		turtle.goto(SIZE_X * 3 / 10, SIZE_Y / 7)
 		turtle.pendown()
 		turtle.write("c/Dinner")
 		turtle.penup()
@@ -75,7 +77,7 @@ def riddles():
 		turtle.pendown()
 		turtle.write("d/Brunch")
 			
-	if girl.gif.pos() == chad:
+	if girl.pos() == chad:
 		stamp.stamp()
 		turtle.penup()
 		turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 /7)
@@ -90,7 +92,7 @@ def riddles():
 		turtle.pendown()
 		turtle.write("b/24,600")
 		turtle.penup()
-		turtle.goto(SIZE_X * 3 /10 , SIZE_Y / 7)
+		turtle.goto(SIZE_X * 3 / 10, SIZE_Y / 7)
 		turtle.pendown()
 		turtle.write("c/13,750")
 		turtle.penup()
@@ -98,7 +100,7 @@ def riddles():
 		turtle.pendown()
 		turtle.write("d/47,500")
 		
-	if girl.gif.pos() == peru:
+	if girl.pos() == peru:
 		stamp.stamp()
 		turtle.penup()
 		turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7)
@@ -111,9 +113,9 @@ def riddles():
 		turtle.penup()
 		turtle.goto(-SIZE_X * 0.3, -SIZE_Y * 2 / 7)
 		turtle.pendown()
-		turtle.wirte("b/orange")
+		turtle.write("b/orange")
 		turtle.penup()
-		turtle.goto(SIZE_X * 3 /10, SIZE_Y / 7)
+		turtle.goto(SIZE_X * 3 / 10, SIZE_Y / 7)
 		turtle.pendown()
 		turtle.write("c/tomato")
 		turtle.penup()
@@ -122,7 +124,7 @@ def riddles():
 		turtle.write("d/potato")
 		
 		
-	if girl.gif.pos() == afghanistan:
+	if girl.pos() == afghanistan:
 		stamp.stamp()
 		turtle.penup()
 		turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7)
@@ -147,12 +149,12 @@ def riddles():
 		
 
 		
-monkey = turtle.clone()
-ethiopia = girl.gif.pos()
-madagascar = girl.gif.pos()
-chad = girl.gif.pos()
-peru = girl.gif.pos()
-afghanistan = girl.gif.pos()
+girl = turtle.clone()
+ethiopia = girl.pos()
+madagascar = girl.pos()
+chad = girl.pos()
+peru = girl.pos()
+afghanistan = girl.pos()
 
 
 riddles()
