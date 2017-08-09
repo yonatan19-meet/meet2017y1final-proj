@@ -1,4 +1,6 @@
 import turtle
+import time
+
 SIZE_X=1000
 SIZE_Y=700
 screen = turtle.Screen()
@@ -83,128 +85,353 @@ def score_counter():
         score.goto(380,300)
         score.write("score: "  + "cur_score")
 turtle.shape("square")
-stamp = turtle.clone()
-stamp.shape("square")
-stamp.pensize(1000)
-stamp.goto(0,0)
+turtle.resizemode("user")
+white_stamp = turtle.clone()
+white_stamp.shape("square")
+#stamp.pensize(1000)
+white_stamp.goto(0,0)
+#stamp.showturtle()
+white_stamp.color("white")
+white_stamp.shapesize(100,100,0)
+
+##
+##def answer_A():
+##    turtle.clear()
+##    turtle.goto(0,0)
+##    turtle.write('You answered right', font=("Ariel", 20, "normal"))
+##    time.sleep(2)
+##    white_stamp.hideturtle()
+##    turtle.clear()
+##        
+##def answer_B():
+##    turtle.clear()
+##    turtle.goto(0,0)
+##    turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+##    time.sleep(2)
+##    white_stamp.hideturtle()
+##    turtle.clear()
+##
+##    
+##def answer_C():
+##    turtle.clear()
+##    turtle.goto(0,0)
+##    turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+##    time.sleep(2)
+##    white_stamp.hideturtle()
+##    turtle.clear()
+##    
+##def answer_D():
+##    turtle.clear()
+##    turtle.goto(0,0)
+##    turtle.write('You answered wrong', )
+##    time.sleep(2)
+##    white_stamp.hideturtle()
+##    turtle.clear()
+##    
+
 
 def riddles():
     if girl.pos() == pos_list[0]:
-        stamp.stamp()
+        white_stamp.showturtle()
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7)
         turtle.showturtle()
         turtle.pendown()
-        turtle.write("a kind of tree you can carry in your hand____")
+        turtle.write("a kind of tree you can carry in your hand____", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, SIZE_Y / 7)
         turtle.pendown()
-        turtle.write("a/palm tree")
+        turtle.write("a/palm tree", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, -SIZE_Y * 2 / 7)
         turtle.pendown()
-        turtle.write("b/lost tree")
+        turtle.write("b/lost tree", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(SIZE_X * 3 / 10,SIZE_Y / 7)
         turtle.pendown()
-        turtle.write("c/apple tree")
+        turtle.write("c/apple tree", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(SIZE_X * 3 / 10,-SIZE_Y * 2 / 7 )
-        turtle.pendown()
-        turtle.write("d/dead tree")
+        turtle.hideturtle()
+        turtle.write("d/dead tree", font=("Ariel", 20, "normal"))
+        turtle.penup()
+        def answer_A():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered right', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+                
+        def answer_B():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+
             
+        def answer_C():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+            
+        def answer_D():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', )
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+        
+        
     if girl.pos() == pos_list[1]:
-        stamp.stamp()
+        white_stamp.showturtle()
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7 )
         turtle.pendown()
-        turtle.write("What's an astronaut's favourite meal?____")
+        turtle.write("What's an astronaut's favourite meal?____", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, SIZE_Y / 7)
         turtle.pendown()
-        turtle.write("a/Launch")
+        turtle.write("a/Launch", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, -SIZE_Y * 2 / 7)
         turtle.pendown()
-        turtle.write("b/Breakfast")
+        turtle.write("b/Breakfast", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(SIZE_X * 3 / 10, SIZE_Y / 7)
         turtle.pendown()
-        turtle.write("c/Dinner")
+        turtle.write("c/Dinner", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(SIZE_X * 3 / 10, -SIZE_Y * 2 /7)
         turtle.pendown()
-        turtle.write("d/Brunch")
+        turtle.write("d/Brunch", font=("Ariel", 20, "normal"))
+        turtle.penup()
+        def answer_A():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered right', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+                
+        def answer_B():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+
+            
+        def answer_C():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+            
+        def answer_D():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', )
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+        onkeypress(answer_A, 'a')
+        turtle.onkeypress(answer_B, 'b')
+        turtle.onkeypress(answer_C, 'c')
+        turtle.onkeypress(answer_D, 'd')
+        turtle.listen()
                     
     if girl.pos() == pos_list[2]:
-        stamp.stamp()
+        white_stamp.showturtle()
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 /7)
         turtle.pendown()
-        turtle.write("In israel there is a doctor for every 400 person , in Chad there is 			a doctor for each____")
+        turtle.write("In israel there is a doctor for every 400 person , in Chad there is a doctor for every ____ people", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, -SIZE_Y / 7)
         turtle.pendown()
-        turtle.write("a/23,600")
+        turtle.write("a/23,600", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, -SIZE_Y * 2 / 7)
         turtle.pendown()
-        turtle.write("b/24,600")
+        turtle.write("b/24,600", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(SIZE_X * 3 / 10, SIZE_Y / 7)
         turtle.pendown()
-        turtle.write("c/13,750")
+        turtle.write("c/13,750", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(SIZE_X * 3 / 10,-SIZE_Y * 2 / 7)
         turtle.pendown()
-        turtle.write("d/47,500")
+        turtle.write("d/47,500", font=("Ariel", 20, "normal"))
+        turtle.penup()
+        def answer_A():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered right', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+                
+        def answer_B():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+
+            
+        def answer_C():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+            
+        def answer_D():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', )
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+        onkeypress(answer_A, 'a')
+        turtle.onkeypress(answer_B, 'b')
+        turtle.onkeypress(answer_C, 'c')
+        turtle.onkeypress(answer_D, 'd')
+        turtle.listen()
         
     if girl.pos() == pos_list[3]:
-        stamp.stamp()
+        white_stamp.showturtle()
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7)
         turtle.pendown()
-        turtle.write("what's orange and sounds like a parrot?____")
+        turtle.write("what's orange and sounds like a parrot?____", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(-SIZE_Y * 0.3, SIZE_Y / 7)
         turtle.pendown()
-        turtle.write("a/carrot")
+        turtle.write("a/carrot", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, -SIZE_Y * 2 / 7)
         turtle.pendown()
-        turtle.write("b/orange")
+        turtle.write("b/orange" ,font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(SIZE_X * 3 / 10, SIZE_Y / 7)
         turtle.pendown()
-        turtle.write("c/tomato")
+        turtle.write("c/tomato", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(SIZE_X * 3 / 10,-SIZE_Y * 2 / 7)
         turtle.pendown()
-        turtle.write("d/potato")
-        
+        turtle.write("d/potato", font=("Ariel", 20, "normal"))
+        turtle.penup()
+        def answer_A():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered right', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+                
+        def answer_B():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+
+            
+        def answer_C():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+            
+        def answer_D():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', )
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+        onkeypress(answer_A, 'a')
+        turtle.onkeypress(answer_B, 'b')
+        turtle.onkeypress(answer_C, 'c')
+        turtle.onkeypress(answer_D, 'd')
+        turtle.listen()
             
     if girl.pos() == pos_list[-1]:
-        stamp.stamp()
+        white_stamp.showturtle()
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7)
         turtle.pendown()
-        turtle.write("Snake , Elephant , Tapir , ...")
+        turtle.write("Snake , Elephant , Tapir , ...", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, SIZE_Y / 7)
         turtle.pendown()
-        turtle.write("a/Rabbit")
+        turtle.write("a/Rabbit", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, -SIZE_Y * 2 / 7)
         turtle.pendown()
-        turtle.write("b/Bear")
+        turtle.write("b/Bear", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(SIZE_X * 3 /10, SIZE_Y / 7)
         turtle.pendown()
-        turtle.write("c/Ostrich")
+        turtle.write("c/Ostrich", font=("Ariel", 20, "normal"))
         turtle.penup()
         turtle.goto(SIZE_X * 3 / 10,-SIZE_Y * 2 / 7)
         turtle.pendown()
-        turtle.write("d/Whale")
+        turtle.write("d/Whale", font=("Ariel", 20, "normal"))
+        turtle.penup()
+        def answer_A():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered right', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+                
+        def answer_B():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+
+            
+        def answer_C():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+            
+        def answer_D():
+            turtle.clear()
+            turtle.goto(0,0)
+            turtle.write('You answered wrong', )
+            time.sleep(2)
+            white_stamp.hideturtle()
+            turtle.clear()
+        onkeypress(answer_A, 'a')
+        turtle.onkeypress(answer_B, 'b')
+        turtle.onkeypress(answer_C, 'c')
+        turtle.onkeypress(answer_D, 'd')
+        turtle.listen()
 
 
 
@@ -276,35 +503,14 @@ turtle.listen()
 dictionary = {"a kind of tree you can carry in your hand ____" : 'palm tree' , "What is an astronaut's favourite meal?____" : 'Launch' , "In israel there is a doctor fot every 400 person , in Chad there is a doctor for each ____" : '23,600' , "what's orange and sounds like a parrot?____" : 'carrot' , " Snake , Elephant , Tapir , ...": 'Rabbit' }
 SIZE_X = 1000
 SIZE_Y = 700
-def answer_A():
-    turtle.clear()
-    turtle.goto(0,0)
-    turtle.write('You answered right')
-        
-def answer_B():
-    turtle.clear()
-    turtle.goto(0,0)
-    turtle.write('You answered wrong')
-        
-def answer_C():
-    turtle.clear()
-    turtle.goto(0,0)
-    turtle.write('You answered wrong')
-        
-def answer_D():
-    turtle.clear()
-    turtle.goto(0,0)
-    turtle.write('You answered wrong')
+
+
 
 stamp = turtle.clone()
 stamp.shape("square")
 stamp.pensize(1000)
         
-turtle.onkeypress(answer_A, 'a')
-turtle.onkeypress(answer_B, 'b')
-turtle.onkeypress(answer_C, 'c')
-turtle.onkeypress(answer_D, 'd')
-turtle.listen()
+
 
 
 
