@@ -23,6 +23,20 @@ ethiopia1.goto(-10,-130)
 ethiopia1.pendown()
 ethiopia1.stamp()
 
+ethiopia2 = turtle.clone()
+ethiopia2.shape("turtle")
+ethiopia2.penup()
+ethiopia2.goto(-20,-160)
+ethiopia2.pendown()
+ethiopia2.stamp()
+
+ethiopia3 = turtle.clone()
+ethiopia3.shape("turtle")
+ethiopia3.penup()
+ethiopia3.goto(-20,-200)
+ethiopia3.pendown()
+ethiopia3.stamp()
+
 madagascar = turtle.clone()
 madagascar.shape("turtle")
 madagascar.penup()
@@ -30,12 +44,37 @@ madagascar.goto(50,300)
 madagascar.pendown()
 madagascar.stamp()
 
+madagascar1 = turtle.clone()
+madagascar1.shape("turtle")
+madagascar1.penup()
+madagascar1.goto(30,260)
+madagascar1.pendown()
+madagascar1.stamp()
+
+madagascar2 = turtle.clone()
+madagascar2.shape("turtle")
+madagascar2.penup()
+madagascar2.goto(10,230)
+madagascar2.pendown()
+madagascar2.stamp()
+
 chad = turtle.clone()
 chad.shape("turtle")
 chad.penup()
 chad.goto(-400,200)
 chad.stamp
 
+chad1 = turtle.clone()
+chad1.shape("turtle")
+chad1.penup()
+chad1.goto(-430,220)
+chad1.stamp
+
+chad2 = turtle.clone()
+chad2.shape("turtle")
+chad2.penup()
+chad2.goto(-230,180)
+chad2.stamp
 
 peru = turtle.clone()
 peru.shape("turtle")
@@ -43,11 +82,37 @@ peru.penup()
 peru.goto(320,40)
 peru.stamp
 
-afghanistan= turtle.clone()
+peru1 = turtle.clone()
+peru1.shape("turtle")
+peru1.penup()
+peru1.goto(350,60)
+peru1.stamp
+
+peru2 = turtle.clone()
+peru2.shape("turtle")
+peru2.penup()
+peru2.goto(290,40)
+peru2.stamp
+
+
+
+afghanistan = turtle.clone()
 afghanistan.shape("turtle")
 afghanistan.penup()
 afghanistan.goto(-300,-110)
 afghanistan.stamp
+
+afghanistan1 = turtle.clone()
+afghanistan1.shape("turtle")
+afghanistan1.penup()
+afghanistan1.goto(-340,-90)
+afghanistan1.stamp
+
+afghanistan2 = turtle.clone()
+afghanistan2.shape("turtle")
+afghanistan2.penup()
+afghanistan2.goto(-280,-70)
+afghanistan2.stamp
 
 pos_list = [(-50.00,-120.00), (50,300), (-400,200), (320,40), (-300,-100)]
 new_pos_list = [(-10,-130)]
@@ -65,17 +130,30 @@ riddle_dict = {
                     'correct' : 'Afghanistan'
                 } ,
         'ethiopia2' : {
-                    'question' : "
+                    'question' : "What is the meaning of DU?" ,
+                    'answer_choices' : ['Dear Universe', "Dr. Unicorn" , "Directly Used" , "Deeper Understanding"],
+                    'correct' : "Deeper Understanding" ,
+                } ,
+        'ethiopia3' : {
+                    'question' : "How many times does the letter A appears when counting from 1 to 100?" ,
+                    'answer_choices' : ['1', '34', '0', '6'] ,
+                    'correct' : '0' ,
+                },
         'madagascar': {
                 'question': 'What is an astronauts favourite meal?' ,
                 'answer_choices' :['Launch' , 'Breakfast' , 'Dinner' , 'Brunch'],
                 'correct' : 'Launch'
                 } ,
-        'madagascar1': {
+        'madagascar1' : {
                 'question' : 'What is the precentage of hungry people in the world?',
                 'answer_choices' :['1.2', '5.7', '10.9', '21.4'],
                 'correct' : '10.9'
-                } , 
+                } ,
+        'madagascar2' : {
+                'question' : '2, 6, 8, 14, 22, 36, 58, ...',
+                'answer_choices' : ['64', '3.1415', '94', 'all you need is math'],
+                'correct' : '94'
+                } ,
         'chad': {
                 'question' : 'In israel there is a doctor for every 400 person , in Chad there is a doctor for every ____',
                 'answer_choices' : ['47,500' , '13,750' , '23,600' , '24,600'],
@@ -86,6 +164,11 @@ riddle_dict = {
                 'answer_choices' : ['10 millions' , '795 millions' , '2.3 billions', '0'],
                 'correct' : '795 millions'
                 } ,
+        'chad2' : {
+                'question' : 'How cool is Mustafa?',
+                'answer_choices' : ['High school', '10.5', 'No more than Ted', 'Air conditioner'] ,
+                'correct' : 'High school'
+            } ,
         'peru' : {
                 'question' : 'What is orange and sounds like a parrot?',
                 'answer_choices' : ['tomato' , 'orange' , 'potato' , 'carrot'],
@@ -96,17 +179,26 @@ riddle_dict = {
                 'answer_choices' : ['USaid', 'The Israeli government', 'Facebook', 'HP'],
                 'correct' : 'USaid'
                 } ,
+        'peru2' : {
+                'question' : "Which day is holy for Hinduism?",
+                'answer_choices' : ['Tuesday', 'Saturday', 'Every Day Is Holy', 'They do not have one'],
+                'correct' : 'They do not have one',
+                } ,
         'afghanistan': {
                 'question' : "Snake, Elephant, Tapir, ...",
                 'answer_choices' : ['Rabbit' , 'Bear' , 'Ostrich' , 'Whale'],
                 'correct' : 'Rabbit'
                 } ,
         'afghanistan1': {
-                'question' : 'How many people in the world have no access to clean water'.
-                'answer_choices' : ['50 millions', '100 thousands', '1 billion', '667 millions']
+                'question' : 'How many people in the world have no access to clean water',
+                'answer_choices' : ['50 millions', '100 thousands', '1 billion', '667 millions'],
                 'correct' : '667 millions'
                 } ,
-        
+        'afghanistan2' :{
+                'question' : 'Which of the following letters appear the least in the periodic table?',
+                'answer_choices' : ['Z', 'G', 'X', 'J'] ,
+                'correct' : 'J'
+                }
         }
 
 
@@ -360,27 +452,33 @@ def riddles():
         lis()
 
 
+UP_EDGE = 350
+DOWN_EDGE = -350
+LEFT_EDGE = -500
+RIGHT_EDGE = 500
+
 
 def move_girl():
     my_pos = girl.pos()
     x_pos = my_pos[0]
     y_pos = my_pos[1]
-
-    if direction==UP:
+    n = 3
+    if direction==UP and girl.pos()[1] <= UP_EDGE - (10 * n):
         girl.goto(x_pos, y_pos + 10)
         print("Up")
-    elif direction==LEFT:
+    elif direction==LEFT and girl.pos()[0] >= LEFT_EDGE + (10*n):
         girl.goto(x_pos - 10, y_pos)
         print("Left")
-    elif direction==RIGHT:
+    elif direction==RIGHT and girl.pos()[0] <= RIGHT_EDGE - (10 * n):
         girl.goto(x_pos + 10, y_pos)
         print("Right")
-    elif direction==DOWN:
+    elif direction==DOWN and girl.pos()[1] >= DOWN_EDGE + (10*n):
         girl.goto(x_pos, y_pos - 10)
         print("Down")
 
     riddles()
-        
+
+
 turtle.penup()
 UP_ARROW = "Up"
 LEFT_ARROW = "Left"
