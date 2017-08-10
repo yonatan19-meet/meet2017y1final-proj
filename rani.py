@@ -5,6 +5,35 @@ stamp.pensize(1000)
 dictionary = {"a kind of tree you can carry in your hand ____" : 'palm tree' , "What is an astronaut's favourite meal?____" : 'Launch' , "In israel there is a doctor fot every 400 person , in Chad there is a doctor for each ____" : '23,600' , "what's orange and sounds like a parrot?____" : 'carrot' , " Snake , Elephant , Tapir , ...": 'Rabbit' }
 SIZE_X = 1000
 SIZE_Y = 700
+riddle_dict = {
+
+        'ethiopia': {
+                'question': 'a kind of tree you can carry in your hand____',
+                'answers_choices' :['dead tree' , 'palm tree' , 'apple tree' , 'lost tree'],
+                'correct' : 'palm tree'
+                }
+        'madagascar': {
+                'question': 'What is an astronauts favourite meal?____' ,
+                'answer_choices' :['Launch' , 'Breakfast' , 'Dinner' , 'Brunch'],
+                'correct' : 'Launch'
+                }
+        'chad': {
+                'question' : 'In israel there is a doctor for each 400 person , in Chad there is a doctor foe each ____',
+                'answer_choices' :['47,500' , '13,750' , '23,600' , '24,600'],
+                'correct' : '23,600'
+                }
+        'peru': {
+                'question': 'what is orange and sounds like a parrot?____',
+                'answer_choices' :['tomato' , 'orange' , 'potato' , 'carrot'],
+                'correct' : 'carrot'
+                }
+        'afghaniatan': {
+                'question' : 'Snake' , 'Elephant' , 'Tapir' , '...',
+                'answer_choices' :['Rabbit' , 'Bear' , 'Ostrich' , 'Whale'],
+                'correct' : 'Rabbit'
+                }
+        
+                
 def answer_A():
         turtle.clear()
         turtle.goto(0,0)
