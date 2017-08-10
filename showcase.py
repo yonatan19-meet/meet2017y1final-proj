@@ -60,12 +60,10 @@ riddle_dict = {
                 'correct' : 'palm tree'
                 } ,
         'ethiopia1' : {
-                    'question' : "Which country's name is misspelled in our map?",
+                    'question' : "Which country is misspelled in our map?",
                     'answer_choices' : ['Ethiopia', 'Chad', 'Peru', 'Afghanistan'],
                     'correct' : 'Afghanistan'
                 } ,
-        'ethiopia2' : {
-                    'question' : "
         'madagascar': {
                 'question': 'What is an astronauts favourite meal?' ,
                 'answer_choices' :['Launch' , 'Breakfast' , 'Dinner' , 'Brunch'],
@@ -78,35 +76,21 @@ riddle_dict = {
                 } , 
         'chad': {
                 'question' : 'In israel there is a doctor for every 400 person , in Chad there is a doctor for every ____',
-                'answer_choices' : ['47,500' , '13,750' , '23,600' , '24,600'],
+                'answer_choices' :['47,500' , '13,750' , '23,600' , '24,600'],
                 'correct' : '23,600'
                 } ,
-        'chad1': {
-                'question' : 'How many hungry people are there in the world?',
-                'answer_choices' : ['10 millions' , '795 millions' , '2.3 billions', '0'],
-                'correct' : '795 millions'
-                } ,
-        'peru' : {
-                'question' : 'What is orange and sounds like a parrot?',
-                'answer_choices' : ['tomato' , 'orange' , 'potato' , 'carrot'],
+##        'chad1': {
+##                '
+        'peru': {
+                'question': 'What is orange and sounds like a parrot?',
+                'answer_choices' :['tomato' , 'orange' , 'potato' , 'carrot'],
                 'correct' : 'carrot'
-                } ,
-        'peru1' : {
-                'question' : "Who is MEET's biggest donor?",
-                'answer_choices' : ['USaid', 'The Israeli government', 'Facebook', 'HP'],
-                'correct' : 'USaid'
                 } ,
         'afghanistan': {
                 'question' : "Snake, Elephant, Tapir, ...",
-                'answer_choices' : ['Rabbit' , 'Bear' , 'Ostrich' , 'Whale'],
+                'answer_choices' :['Rabbit' , 'Bear' , 'Ostrich' , 'Whale'],
                 'correct' : 'Rabbit'
-                } ,
-        'afghanistan1': {
-                'question' : 'How many people in the world have no access to clean water'.
-                'answer_choices' : ['50 millions', '100 thousands', '1 billion', '667 millions']
-                'correct' : '667 millions'
-                } ,
-        
+                }
         }
 
 
