@@ -116,7 +116,7 @@ def answer_A():
     turtle.clear()
     turtle.goto(0,0)
     global country
-    riddle_answer = riddle_dict[country]['answers_choices'][0] == riddle_dict[country]['correct']
+    riddle_answer = riddle_dict[country]['answer_choices'][0] == riddle_dict[country]['correct']
     if riddle_answer == True:
         turtle.write('You answered right', font=("Ariel", 20, "normal"))
         time.sleep(2)
@@ -154,7 +154,7 @@ def answer_C():
     turtle.clear()
     turtle.goto(0,0)
     global country
-    riddle_answer = riddle_dict[country]['answers_choices'][2] == riddle_dict[country]['correct']
+    riddle_answer = riddle_dict[country]['answer_choices'][2] == riddle_dict[country]['correct']
         
     if riddle_answer == True:
         turtle.write('You answered right', font=("Ariel", 20, "normal"))
@@ -173,7 +173,7 @@ def answer_D():
     turtle.clear()
     turtle.goto(0,0)
     global country
-    riddle_answer = riddle_dict[country]['answers_choices'][3] == riddle_dict[country]['correct']
+    riddle_answer = riddle_dict[country]['answer_choices'][3] == riddle_dict[country]['correct']
     
     if riddle_answer == True:
         turtle.write('You answered right', font=("Ariel", 20, "normal"))
