@@ -45,6 +45,36 @@ afghanistan.stamp
 
 pos_list = [(-50.00,-120.00), (50,300), (-400,200), (320,40), (-300,-100)]
 
+riddle_dict = {
+
+        'ethiopia': {
+                'question': 'a kind of tree you can carry in your hand____',
+                'answer_choices' :['dead tree' , 'palm tree' , 'apple tree' , 'lost tree'],
+                'correct' : 'palm tree'
+                } ,
+        'madagascar': {
+                'question': 'What is an astronauts favourite meal?____' ,
+                'answer_choices' :['Launch' , 'Breakfast' , 'Dinner' , 'Brunch'],
+                'correct' : 'Launch'
+                } ,
+        'chad': {
+                'question' : 'In israel there is a doctor for each 400 person , in Chad there is a doctor foe each ____',
+                'answer_choices' :['47,500' , '13,750' , '23,600' , '24,600'],
+                'correct' : '23,600'
+                } ,
+        'peru': {
+                'question': 'what is orange and sounds like a parrot?____',
+                'answer_choices' :['tomato' , 'orange' , 'potato' , 'carrot'],
+                'correct' : 'carrot'
+                } ,
+        'afghanistan': {
+                'question' : "'Snake, Elephant, Tapir, ...",
+                'answer_choices' :['Rabbit' , 'Bear' , 'Ostrich' , 'Whale'],
+                'correct' : 'Rabbit'
+                }
+        }
+
+
 turtle.register_shape('girl.gif')
 turtle.shape('girl.gif')
 girl = turtle.clone()
@@ -62,376 +92,195 @@ turtle.stamp()
 turtle.hideturtle()
 turtle.penup()
 
-##turtle.clone()
-##turtle.register_shape('bananas3.gif')
-##turtle.shape('bananas3.gif')
-##turtle.goto(340,300)
-##turtle.stamp()
-##turtle.penup()
-
 score = turtle.clone()
 score.goto(380, 300)
 score.pendown()
-cur_score = '0'
-score.write("score: " + cur_score)
+cur_score = 0
+score.write("score: " + str(cur_score))
 
 def score_counter():
-    if riddle_answer == true:
-        int(cur_score)
-        cur_score+=16
-        str(cur_score)
-        score.goto(380,300)
-        score.write("                              ", color="white")
-        score.goto(380,300)
-        score.write("score: "  + "cur_score")
+    global cur_score
+    cur_score+=16
+    score.clear()
+    score.write("score: "  + str(cur_score))
+
 turtle.shape("square")
 turtle.resizemode("user")
 white_stamp = turtle.clone()
 white_stamp.shape("square")
-#stamp.pensize(1000)
 white_stamp.goto(0,0)
-#stamp.showturtle()
 white_stamp.color("white")
 white_stamp.shapesize(100,100,0)
 
-##
-##def answer_A():
-##    turtle.clear()
-##    turtle.goto(0,0)
-##    turtle.write('You answered right', font=("Ariel", 20, "normal"))
-##    time.sleep(2)
-##    white_stamp.hideturtle()
-##    turtle.clear()
-##        
-##def answer_B():
-##    turtle.clear()
-##    turtle.goto(0,0)
-##    turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
-##    time.sleep(2)
-##    white_stamp.hideturtle()
-##    turtle.clear()
-##
-##    
-##def answer_C():
-##    turtle.clear()
-##    turtle.goto(0,0)
-##    turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
-##    time.sleep(2)
-##    white_stamp.hideturtle()
-##    turtle.clear()
-##    
-##def answer_D():
-##    turtle.clear()
-##    turtle.goto(0,0)
-##    turtle.write('You answered wrong', )
-##    time.sleep(2)
-##    white_stamp.hideturtle()
-##    turtle.clear()
-##    
+def answer_A():
+    turtle.clear()
+    turtle.goto(0,0)
+    global country
+    riddle_answer = riddle_dict[country]['answers_choices'][0] == riddle_dict[country]['correct']
+    if riddle_answer == True:
+        turtle.write('You answered right', font=("Ariel", 20, "normal"))
+        time.sleep(2)
+        turtle.clear()
+        white_stamp.hideturtle()
+        score_counter()
+    else:
+        turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+        time.sleep(2)
+        turtle.clear()
+        white_stamp.hideturtle()
+    turtle.clear()
+   
+        
+def answer_B():
+    turtle.clear()
+    turtle.goto(0,0)
+    global country
+    riddle_answer = riddle_dict[country]['answer_choices'][1] == riddle_dict[country]['correct']
+        
+    if riddle_answer == True:
+        turtle.write('You answered right', font=("Ariel", 20, "normal"))
+        time.sleep(2)
+        turtle.clear()
+        white_stamp.hideturtle()
+        score_counter()
+    else:
+        turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+        time.sleep(2)
+        turtle.clear()
+        white_stamp.hideturtle()
+    turtle.clear()
+       
+def answer_C():
+    turtle.clear()
+    turtle.goto(0,0)
+    global country
+    riddle_answer = riddle_dict[country]['answers_choices'][2] == riddle_dict[country]['correct']
+        
+    if riddle_answer == True:
+        turtle.write('You answered right', font=("Ariel", 20, "normal"))
+        time.sleep(2)
+        turtle.clear()
+        white_stamp.hideturtle()
+        score_counter()
+    else:
+        turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+        time.sleep(2)
+        turtle.clear()
+        white_stamp.hideturtle()
+    turtle.clear()
+   
+def answer_D():
+    turtle.clear()
+    turtle.goto(0,0)
+    global country
+    riddle_answer = riddle_dict[country]['answers_choices'][3] == riddle_dict[country]['correct']
+    
+    if riddle_answer == True:
+        turtle.write('You answered right', font=("Ariel", 20, "normal"))
+        time.sleep(2)
+        turtle.clear()
+        white_stamp.hideturtle()
+        score_counter()
+    else:
+        turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
+        time.sleep(2)
+        turtle.clear()
+        white_stamp.hideturtle()
+    turtle.clear()
+def lis():
+    turtle.onkeypress(answer_A, 'a')
+    turtle.onkeypress(answer_B, 'b')
+    turtle.onkeypress(answer_C, 'c')
+    turtle.onkeypress(answer_D, 'd')
+    turtle.listen()
 
-
+letters = ['a', 'b', 'c', 'd']
+pos1_list= [(-SIZE_X * 0.3, SIZE_Y / 7),(-SIZE_X * 0.3, -SIZE_Y * 2 / 7),(SIZE_X * 3 / 10, SIZE_Y / 7),(SIZE_X * 3 / 10, -SIZE_Y * 2 /7)]
 def riddles():
+    global country, riddle_dict, letters,pos1_list
     if girl.pos() == pos_list[0]:
+        country = 'ethiopia'
         white_stamp.showturtle()
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7)
-        turtle.showturtle()
+        #turtle.showturtle()
         turtle.pendown()
-        turtle.write("a kind of tree you can carry in your hand____", font=("Ariel", 20, "normal"))
+        turtle.write(riddle_dict[country]['question'], font=("Ariel", 20, "normal"))
         turtle.penup()
-        turtle.goto(-SIZE_X * 0.3, SIZE_Y / 7)
-        turtle.pendown()
-        turtle.write("a/palm tree", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(-SIZE_X * 0.3, -SIZE_Y * 2 / 7)
-        turtle.pendown()
-        turtle.write("b/lost tree", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(SIZE_X * 3 / 10,SIZE_Y / 7)
-        turtle.pendown()
-        turtle.write("c/apple tree", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(SIZE_X * 3 / 10,-SIZE_Y * 2 / 7 )
-        turtle.hideturtle()
-        turtle.write("d/dead tree", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        def answer_A():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered right', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-                
-        def answer_B():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-
-            
-        def answer_C():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-            
-        def answer_D():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', )
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-        
-        
+        for n in range (4):
+            turtle.goto(pos1_list[n])
+            turtle.pendown()
+            turtle.write(letters[n] + '. ' + riddle_dict[country]['answer_choices'][n], font=("Ariel", 20, "normal"))
+            turtle.penup()
+        lis()
+             
     if girl.pos() == pos_list[1]:
         white_stamp.showturtle()
+        country = 'madagascar'
+        white_stamp.showturtle()
         turtle.penup()
-        turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7 )
+        turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7)
+        #turtle.showturtle()
         turtle.pendown()
-        turtle.write("What's an astronaut's favourite meal?____", font=("Ariel", 20, "normal"))
+        turtle.write(riddle_dict[country]['question'], font=("Ariel", 20, "normal"))
         turtle.penup()
-        turtle.goto(-SIZE_X * 0.3, SIZE_Y / 7)
-        turtle.pendown()
-        turtle.write("a/Launch", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(-SIZE_X * 0.3, -SIZE_Y * 2 / 7)
-        turtle.pendown()
-        turtle.write("b/Breakfast", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(SIZE_X * 3 / 10, SIZE_Y / 7)
-        turtle.pendown()
-        turtle.write("c/Dinner", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(SIZE_X * 3 / 10, -SIZE_Y * 2 /7)
-        turtle.pendown()
-        turtle.write("d/Brunch", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        def answer_A():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered right', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-                
-        def answer_B():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-
-            
-        def answer_C():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-            
-        def answer_D():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', )
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-        onkeypress(answer_A, 'a')
-        turtle.onkeypress(answer_B, 'b')
-        turtle.onkeypress(answer_C, 'c')
-        turtle.onkeypress(answer_D, 'd')
-        turtle.listen()
+        for n in range (4):
+            turtle.goto(pos1_list[n])
+            turtle.pendown()
+            turtle.write(letters[n] + '. ' + riddle_dict[country]['answer_choices'][n], font=("Ariel", 20, "normal"))
+            turtle.penup()
+        lis()
                     
     if girl.pos() == pos_list[2]:
         white_stamp.showturtle()
+        country='chad'
+        white_stamp.showturtle()
         turtle.penup()
-        turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 /7)
+        turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7)
+        #turtle.showturtle()
         turtle.pendown()
-        turtle.write("In israel there is a doctor for every 400 person , in Chad there is a doctor for every ____ people", font=("Ariel", 20, "normal"))
+        turtle.write(riddle_dict[country]['question'], font=("Ariel", 20, "normal"))
         turtle.penup()
-        turtle.goto(-SIZE_X * 0.3, -SIZE_Y / 7)
-        turtle.pendown()
-        turtle.write("a/23,600", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(-SIZE_X * 0.3, -SIZE_Y * 2 / 7)
-        turtle.pendown()
-        turtle.write("b/24,600", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(SIZE_X * 3 / 10, SIZE_Y / 7)
-        turtle.pendown()
-        turtle.write("c/13,750", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(SIZE_X * 3 / 10,-SIZE_Y * 2 / 7)
-        turtle.pendown()
-        turtle.write("d/47,500", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        def answer_A():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered right', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-                
-        def answer_B():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-
-            
-        def answer_C():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-            
-        def answer_D():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', )
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-        onkeypress(answer_A, 'a')
-        turtle.onkeypress(answer_B, 'b')
-        turtle.onkeypress(answer_C, 'c')
-        turtle.onkeypress(answer_D, 'd')
-        turtle.listen()
+        for n in range (4):
+            turtle.goto(pos1_list[n])
+            turtle.pendown()
+            turtle.write(letters[n] + '. ' + riddle_dict[country]['answer_choices'][n], font=("Ariel", 20, "normal"))
+            turtle.penup()
+        lis()
         
     if girl.pos() == pos_list[3]:
         white_stamp.showturtle()
-        turtle.penup()
-        turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7)
-        turtle.pendown()
-        turtle.write("what's orange and sounds like a parrot?____", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(-SIZE_Y * 0.3, SIZE_Y / 7)
-        turtle.pendown()
-        turtle.write("a/carrot", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(-SIZE_X * 0.3, -SIZE_Y * 2 / 7)
-        turtle.pendown()
-        turtle.write("b/orange" ,font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(SIZE_X * 3 / 10, SIZE_Y / 7)
-        turtle.pendown()
-        turtle.write("c/tomato", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(SIZE_X * 3 / 10,-SIZE_Y * 2 / 7)
-        turtle.pendown()
-        turtle.write("d/potato", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        def answer_A():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered right', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-                
-        def answer_B():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-
-            
-        def answer_C():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-            
-        def answer_D():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', )
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-        onkeypress(answer_A, 'a')
-        turtle.onkeypress(answer_B, 'b')
-        turtle.onkeypress(answer_C, 'c')
-        turtle.onkeypress(answer_D, 'd')
-        turtle.listen()
-            
-    if girl.pos() == pos_list[-1]:
+        country='peru'
         white_stamp.showturtle()
         turtle.penup()
         turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7)
+        #turtle.showturtle()
         turtle.pendown()
-        turtle.write("Snake , Elephant , Tapir , ...", font=("Ariel", 20, "normal"))
+        turtle.write(riddle_dict[country]['question'], font=("Ariel", 20, "normal"))
         turtle.penup()
-        turtle.goto(-SIZE_X * 0.3, SIZE_Y / 7)
-        turtle.pendown()
-        turtle.write("a/Rabbit", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(-SIZE_X * 0.3, -SIZE_Y * 2 / 7)
-        turtle.pendown()
-        turtle.write("b/Bear", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(SIZE_X * 3 /10, SIZE_Y / 7)
-        turtle.pendown()
-        turtle.write("c/Ostrich", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        turtle.goto(SIZE_X * 3 / 10,-SIZE_Y * 2 / 7)
-        turtle.pendown()
-        turtle.write("d/Whale", font=("Ariel", 20, "normal"))
-        turtle.penup()
-        def answer_A():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered right', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-                
-        def answer_B():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-
+        for n in range (4):
+            turtle.goto(pos1_list[n])
+            turtle.pendown()
+            turtle.write(letters[n] + '. ' + riddle_dict[country]['answer_choices'][n], font=("Ariel", 20, "normal"))
+            turtle.penup()
+        lis()
             
-        def answer_C():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', font=("Ariel", 20, "normal"))
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-            
-        def answer_D():
-            turtle.clear()
-            turtle.goto(0,0)
-            turtle.write('You answered wrong', )
-            time.sleep(2)
-            white_stamp.hideturtle()
-            turtle.clear()
-        onkeypress(answer_A, 'a')
-        turtle.onkeypress(answer_B, 'b')
-        turtle.onkeypress(answer_C, 'c')
-        turtle.onkeypress(answer_D, 'd')
-        turtle.listen()
+    if girl.pos() == pos_list[-1]:
+        white_stamp.showturtle()
+        country='afghanistan'
+        white_stamp.showturtle()
+        turtle.penup()
+        turtle.goto(-SIZE_X * 0.3, SIZE_Y * 3 / 7)
+        #turtle.showturtle()
+        turtle.pendown()
+        turtle.write(riddle_dict[country]['question'], font=("Ariel", 20, "normal"))
+        turtle.penup()
+        for n in range (4):
+            turtle.goto(pos1_list[n])
+            turtle.pendown()
+            turtle.write(letters[n] + '. ' + riddle_dict[country]['answer_choices'][n], font=("Ariel", 20, "normal"))
+            turtle.penup()
+        lis()
 
 
 
